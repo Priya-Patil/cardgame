@@ -1,0 +1,642 @@
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/Scrll_Drawer"
+    android:layout_width="230dp"
+    android:layout_height="match_parent"
+    android:layout_gravity="left|start"
+    android:background="@color/lightGrey"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    android:weightSum="1">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@color/colorGrey"
+            android:id="@+id/rl_headerprofile"
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:src="@drawable/sidepanel"
+                android:scaleType="fitXY"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_headerprofile"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical"
+            android:id="@+id/layout2"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/txt_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="Home"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/txt_mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:text="99999999"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"/>
+        </LinearLayout>
+
+
+        <!--region menu-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout2"
+            android:layout_marginBottom="2dp"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.40dp"
+                android:layout_marginLeft="-20dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="-20dp"/>
+
+            <!--region home -->
+            <RelativeLayout
+                android:id="@+id/rl_home"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_feed"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/mychoice"
+                    android:layout_centerVertical="true"
+                     />
+
+
+                <TextView
+                    android:id="@+id/txt_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_feed"
+                    android:gravity="center_vertical"
+                    android:text="Home"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+            <!--endregion-->
+
+            <!--region profile -->
+            <RelativeLayout
+                android:id="@+id/rl_center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_profile"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/sub_trackwork"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="0dp"
+                    android:layout_toRightOf="@+id/iv_profile"
+                    android:gravity="center_vertical"
+                    android:text=" Center"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+            <!--endregion-->
+
+
+            <!--region Payment-->
+            <RelativeLayout
+                android:id="@+id/rl_archives"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_payment"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/query"
+                    android:layout_centerVertical="true"
+                    />
+
+
+                <TextView
+                    android:id="@+id/tv_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_payment"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Archives"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <!--endregion-->
+ <!--region Payment-->
+            <RelativeLayout
+                android:id="@+id/rl_RaceCard"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_Payout"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/sub_mychoice"
+                    android:backgroundTint="@color/purple_500"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_Payout"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Race Card"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_TrackWork"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_ChangePassword"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/sub_trackwork"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_ChangePassword"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Track Work"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_ScaleRating"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_Profile"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/mediachoice"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_Profile"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Scale Rating"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_SpeedRating"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_rl_SpeedRating"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/sub_mychoice"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_rl_SpeedRating"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Speed Horse Rating"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_BendPositionRating"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_BendPositionRating"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/nav_privacypolicy"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_BendPositionRating"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Bend Position Rating"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_MediaChoice"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_MediaChoice"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/mediachoice"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_MediaChoice"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Media Tips"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_BestTips"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_BestTips"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/analysis"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_BestTips"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="@string/name"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_Choices"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_Choices"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/sub_mychoice"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_Choices"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="BADSHA HANDICAPPER\n         CHOICES"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_Results"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_Results"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/reasult"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_Results"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Results"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_QueryFeedback"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_QueryFeedback"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/query"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_QueryFeedback"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Query / Feedback"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_PrivacyPolicy"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_PrivacyPolicy"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/privecypolicy"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_PrivacyPolicy"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Privacy Policy"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_TermsAndConditions"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_TermsAndConditions"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/tandc"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_TermsAndConditions"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Terms And Conditions"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_Guidlines"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_Guidlines"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/analysis"
+                    android:layout_centerVertical="true"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_Guidlines"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Guidlines"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/rl_Logout"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/iv_Logout"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:src="@drawable/ic_logout"
+                    android:layout_centerVertical="true"
+                    android:tint="@color/purple_700" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="45dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/iv_Logout"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    android:text="Logout"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    />
+            </RelativeLayout>
+            <!--endregion-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/iv_Payout"
+                android:textStyle="bold"
+                android:gravity="center_vertical"
+                android:text="Privacy Policy and T And C"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:id="@+id/txt_privacy"
+                android:visibility="gone"
+                />
+
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:visibility="gone" >
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="8dp"
+                    android:elevation="5dp"
+                    android:scaleType="fitXY"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:background="@color/white"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="32dp"
+                    android:layout_margin="5dp"
+                    android:elevation="5dp"
+                    android:background="@color/lightGrey"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_home_black_24dp" />
+
+
+
+            </LinearLayout>
+
+
+            <!--endregion-->
+
+        </LinearLayout>
+        <!--endregion menu-->
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

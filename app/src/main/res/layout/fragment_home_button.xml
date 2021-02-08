@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- code here for button-->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/back_new">
+
+    <RelativeLayout
+        android:id="@+id/slideup1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_margin="100dp"
+        android:visibility="visible"
+        android:layout_alignParentTop="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Edit here"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="60dp"
+            android:textAllCaps="true"
+            android:visibility="gone"
+            />
+
+        <Button
+            android:id="@+id/btnSlideUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"
+            android:text="Slide Up" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Slide Up"
+            android:id="@+id/txt_slide_up"
+            android:layout_centerInParent="true"
+            android:textSize="20dp"
+            android:layout_marginTop="100dp"
+            android:textColor="@color/white"
+            android:layout_alignBottom="@+id/btnSlideUp"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/slideupView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/slideup1"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_view"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            app:cardUseCompatPadding="true"
+            >
+
+            <TextView
+                android:id="@+id/btn_fourCards"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_centerHorizontal="true"
+                android:text="4 Card"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/buttongradient"
+                android:shadowColor="#E91E63"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="8"
+                android:padding="10dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_view13"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true"
+            android:layout_below="@id/card_view"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="13 cards"
+                android:id="@+id/btn_thirteenCards"
+                android:textAllCaps="true"
+                android:textAlignment="center"
+                android:padding="10dp"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:background="@drawable/buttongradient"
+                android:shadowColor="#E91E63"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:shadowRadius="8"
+                />
+        </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:id="@+id/lottieAnimationView1"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:lottie_rawRes="@raw/lottie"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_marginRight="-50dp"
+        android:layout_marginBottom="-10dp"
+        />
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="100dp"
+        android:id="@+id/lottieAnimationView"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:lottie_rawRes="@raw/coins"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        />
+
+</RelativeLayout>

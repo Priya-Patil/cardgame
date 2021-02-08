@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="id_activityScreenTitles">
+        <item >Home</item>
+        <item > Wallet History</item>
+        <item >Game History</item>
+        <item >About Us </item>
+        <item>Terms and Conditions</item>
+
+    </string-array>
+    <array name="id_activityScreenIcon">
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_baseline_account_balance_wallet_24</item>
+        <item>@drawable/ic_baseline_games_24</item>
+        <item>@drawable/ic_baseline_people_alt_24</item>
+        <item>@drawable/ic_baseline_perm_contact_calendar_24</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+        <item>@drawable/ic_home_black_24dp</item>
+
+    </array>
+
+</resources>

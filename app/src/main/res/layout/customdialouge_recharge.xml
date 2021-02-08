@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/hidden_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        android:layout_margin="10dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:id="@+id/view"
+            android:text="Recharge "
+            android:visibility="visible"
+            android:textColor="@color/color_blue1"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:layout_centerHorizontal="true"
+
+          />
+        <!--Child LinearLayout 1-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Amount"
+            android:id="@+id/tv_amt"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:layout_below="@+id/view"
+            />
+        <Spinner
+            android:id="@+id/sp_Amt"
+            android:layout_toRightOf="@id/tv_amt"
+            android:layout_below="@+id/view"
+            android:padding="10dp"
+            android:spinnerMode="dialog"
+            android:background="@color/white"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_margin="10dp"
+            />
+
+
+        <TextView
+            android:id="@+id/tv_Ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tv_rechOk"
+            android:shadowColor="#A8A8A8"
+            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="50dp"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:text="OK"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_blue1"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_Cancle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="10dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/tv_rechOk"
+            android:shadowColor="#A8A8A8"
+            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="50dp"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:text="Cancle"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_blue1"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_rechOk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:layout_below="@+id/sp_Amt"
+            android:layout_centerHorizontal="true"
+            android:shadowColor="#A8A8A8"
+            android:layout_marginBottom="10dp"
+            android:layout_margin="10dp"
+            android:layout_marginTop="100dp"
+            android:shadowDx="3"
+            android:shadowDy="2"
+            android:shadowRadius="8"
+            android:text="Recharge sucess"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/color_blue1"
+            android:visibility="gone"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+</RelativeLayout>

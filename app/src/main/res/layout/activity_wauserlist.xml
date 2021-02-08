@@ -1,0 +1,185 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".home.HomeActivity"
+        android:background="@color/white" >
+
+        <!--region Toolbar Start-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="-8dp"
+            android:background="@color/colorPrimary"
+            android:gravity="top">
+
+            <RelativeLayout
+                android:id="@+id/replaceToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone">
+
+                <View
+                    android:id="@+id/viewMenuIconBack2"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/ic_arrow_back"
+                    android:backgroundTint="@color/white"
+                    android:visibility="visible"/>
+
+                <EditText
+                    android:id="@+id/toolbarEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="35dp"
+                    android:backgroundTint="@color/colorAccent"
+                    android:textColor="@color/white" />
+
+
+                <View
+                    android:id="@+id/viewReplaceClear"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/ic_clear" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/originalToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <View
+                    android:id="@+id/viewMenuIconBack"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="4dp"
+                    android:background="@drawable/ic_arrow_back"
+                    android:backgroundTint="@color/white"
+                    android:visibility="visible"/>
+
+                <TextView
+                    android:id="@+id/txtTitleBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/viewMenuIconBack"
+                    android:text="Type name"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/toolbarText" />
+
+
+                <View
+                    android:id="@+id/viewSearch"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/ic_search"
+                    android:backgroundTint="@color/white" />
+
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <!--endregion-->
+
+
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="56dp"-->
+<!--            android:background="@color/colorPrimary">-->
+
+<!--            <RelativeLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                >-->
+
+<!--                <ImageView-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:id="@+id/img_back"-->
+<!--                    android:layout_width="22dp"-->
+<!--                    android:layout_height="22dp"-->
+<!--                    android:background="@drawable/ic_arrow_back"-->
+<!--                    android:backgroundTint="@color/white"-->
+<!--                    android:visibility="visible"/>-->
+
+
+
+<!--                <ImageView-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_width="70dp"-->
+<!--                    android:layout_height="70dp"-->
+<!--                    android:src="@drawable/logo"-->
+<!--                    android:layout_alignParentRight="true"-->
+
+<!--                    />-->
+
+
+<!--                <TextView-->
+<!--                    android:layout_centerVertical="true"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="rrrrr"-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:id="@+id/txt_title"-->
+<!--                    android:layout_toRightOf="@+id/img_back"-->
+<!--                    />-->
+
+
+<!--            </RelativeLayout>-->
+
+
+
+<!--        </androidx.appcompat.widget.Toolbar>-->
+
+
+        <Button
+            android:id="@+id/submit1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Send Message"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:background="@drawable/button_background"
+            android:layout_margin="@dimen/padding_20"
+            android:layout_below="@+id/toolbar"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rl_round"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:ignore="MissingConstraints"
+            android:layout_below="@+id/submit1"
+            android:layout_margin="5dp"
+
+
+            />
+
+
+
+
+    </RelativeLayout>
+
+
+</layout>

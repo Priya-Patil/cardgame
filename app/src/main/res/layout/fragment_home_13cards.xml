@@ -1,0 +1,593 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/img_bg">
+
+    <!-- Four Cards Sneha-->
+    <LinearLayout
+        android:id="@+id/ll_fourcards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_arrow_back"
+                    android:layout_marginLeft="@dimen/padding_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cards"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:layout_toRightOf="@id/iv_back"/>
+
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cardsFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal" />
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_total"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/img_total"
+                app:cardBackgroundColor="@color/color_golden"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/rv_cardsFour"
+                app:civ_border_width="3dp"
+                app:civ_border_color="#cfaa01"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/padding_20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/rv_cardsFour"
+                android:background="@drawable/circular_tv"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/child3_rel"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_amount">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recycler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                android:layout_above="@+id/ll_bottomButtons"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/ll_bottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_marginBottom="30dp"
+                android:weightSum="4"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:id="@+id/tv_back"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:background="@drawable/buttongradient"
+                    android:shadowColor="#E91E63"
+                    android:shadowDx="3"
+                    android:shadowDy="2"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:shadowRadius="8"
+                    android:padding="10dp"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:id="@+id/tv_continue"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="60dp"
+                    android:background="@drawable/buttongradient"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:shadowColor="#E91E63"
+                    android:shadowDx="3"
+                    android:shadowDy="2"
+                    android:shadowRadius="8"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <!-- code for 13 cards -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rel13"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentTop="true"
+            android:visibility="gone">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_recycl13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <!-- End Four Cards Sneha-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl_toolbar"
+        android:visibility="gone"
+        >
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_blue"
+            app:titleTextColor="@color/white">
+
+            <ImageView
+                android:id="@+id/img_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_centerVertical="true"
+                />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/circular_tvborder">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:text="200 rs"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginBottom="2dp"
+                    />
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="21dp"
+                    android:src="@mipmap/add_round"
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Wallet History"
+                    android:textStyle="bold"
+                    android:textAllCaps="true"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@+id/img_arrowback"
+                    />
+
+                <ImageView
+                    android:id="@+id/img_arrowback"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:src="@drawable/ic_arrow_back"
+                    android:layout_centerVertical="true"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+    </RelativeLayout>
+
+
+    <!--  code for 4 Cards -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:layout_below="@+id/rl_toolbar"
+        android:id="@+id/rl_cardParent"
+        >
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_cardSub1">
+            <!--code here for 4 cards -->
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_cardFour"
+                android:visibility="gone">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:id="@+id/rl_child1"
+                    android:padding="10dp"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/img_cardOne"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img_cardbg" />
+
+                    <ImageView
+                        android:id="@+id/img_cardTwo"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img_cardbg" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginRight="100dp"
+                    android:id="@+id/child2_rel"
+                    android:padding="10dp"
+                    android:layout_below="@id/rl_child1"
+                    android:layout_centerHorizontal="true">
+
+                    <ImageView
+                        android:id="@+id/img_cardThree"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img_cardbg" />
+
+                    <ImageView
+                        android:id="@+id/img_cardFour"
+                        android:layout_width="50dp"
+                        android:layout_height="70dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="10dp"
+                        android:src="@drawable/img_cardbg" />
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--code here for 13 cards -->
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_cardThirteen"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentTop="true"
+                android:visibility="visible">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_cardThirtreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/rl_cardSub2"
+            android:layout_below="@id/rl_cardSub1"
+            >
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_total1"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/img_total"
+                app:cardBackgroundColor="@color/color_golden"
+                android:layout_centerHorizontal="true"
+                app:civ_border_width="3dp"
+                app:civ_border_color="#cfaa01"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_total"
+                android:text="0"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:layout_centerInParent="true"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_centerVertical="true"
+                android:textColor="@color/black"
+                android:background="@drawable/circular_tv"
+                />
+            <!-- FFC107 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/child3_rel1"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/img_total1">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recycler1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/child3_rel1"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="80dp">
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="5dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:fadingEdge="vertical"
+                    android:background="@color/color_golden"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view"
+                    android:gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:weightSum="4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Back"
+                        android:id="@+id/tv_back1"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:background="@drawable/buttongradient"
+                        android:shadowColor="#E91E63"
+                        android:shadowDx="3"
+                        android:shadowDy="2"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:shadowRadius="8"
+                        android:padding="10dp"/>
+
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Continue"
+                        android:id="@+id/tv_continue1"
+                        android:layout_toRightOf="@+id/btn_back"
+                        android:textAllCaps="true"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="60dp"
+                        android:background="@drawable/buttongradient"
+                        android:gravity="center"
+                        android:layout_weight="2"
+                        android:shadowColor="#E91E63"
+                        android:shadowDx="3"
+                        android:shadowDy="2"
+                        android:shadowRadius="8"
+                        android:padding="10dp"
+                        />
+
+                </LinearLayout>
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"
+                    android:id="@+id/btn_back"
+                    android:layout_below="@+id/view1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/buttongradient"
+                    android:backgroundTint="@color/color_golden"
+                    android:layout_marginBottom="10dp"
+                    android:visibility="gone"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:textAlignment="center"
+                    android:id="@+id/btn_continue"
+                    android:layout_alignParentEnd="true"
+                    android:textAllCaps="true"
+                    android:textSize="12dp"
+                    android:textColor="@color/white"
+                    android:background="@drawable/buttongradient"
+                    android:layout_below="@+id/view1"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/color_golden"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <!-- code for 13 cards -->
+
+        <!--
+            <de.hdodenhof.circleimageview.CircleImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/img_total13"
+                android:layout_below="@+id/rel13"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/img_total"
+                app:civ_border_width="2dp"
+                app:civ_border_color="#FFC107"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/child_rel13"
+                android:layout_marginTop="20dp"
+                android:layout_centerInParent="true"
+                android:layout_below="@+id/img_total13">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recycl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+            <View
+                android:id="@+id/view"
+                android:layout_below="@+id/child3_rel"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="16dp"
+                android:background="@color/black"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/child3_rel"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="100dp">
+
+
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:id="@+id/btn_back"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="60dp"
+                    android:textAllCaps="true"
+                    android:background="@drawable/rounded_shapes"
+                    android:backgroundTint="@color/color_red"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:id="@+id/btn_continue"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:layout_marginLeft="60dp"
+                    android:textAllCaps="true"
+                    android:backgroundTint="@color/color_red"
+                    android:background="@drawable/rounded_shapes"
+                    />
+
+            </RelativeLayout>
+            -->
+
+
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            app:cardBackgroundColor="@color/colorPrimary">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_date"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Date"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:layout_margin="@dimen/margin_10"
+                        />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tv_date"
+                    android:text="Date"
+                    android:layout_margin="@dimen/margin_10"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:padding="10dp"
+                    android:textStyle="bold"
+                    android:layout_weight="1"
+                    />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_time"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/ll_date"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Time"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:layout_margin="@dimen/margin_10"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_time"
+                        android:text="Time"
+                        android:layout_margin="@dimen/margin_10"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ll_amount"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/ll_time"
+
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Amount"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:layout_margin="@dimen/margin_10"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tv_amount"
+                        android:text="Amount"
+                        android:layout_margin="@dimen/margin_10"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        />
+                </LinearLayout>
+
+                <View
+                    android:layout_height="3dp"
+                    android:layout_width="match_parent"
+                    android:background="@color/white"
+                    android:layout_below="@+id/tv_mobile"
+                    android:id="@+id/view"
+                    android:visibility="gone"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>

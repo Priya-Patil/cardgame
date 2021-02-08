@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_random">
+
+
+    <ImageView
+        android:id="@+id/img_card4"
+        android:layout_width="50dp"
+        android:layout_height="70dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:src="@drawable/img_cardbg" />
+
+<androidx.cardview.widget.CardView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    app:cardBackgroundColor="@color/color_golden"
+    android:layout_marginTop="100dp"
+    app:cardElevation="5dp"
+    app:cardCornerRadius="1dp"
+    android:padding="0dp"
+    android:visibility="gone"
+    android:background="@drawable/circular_tv"
+    />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tv_randomColour"
+    android:text=""
+    android:gravity="center"
+    android:textSize="20sp"
+    android:layout_margin="10dp"
+    android:layout_centerInParent="true"
+    android:visibility="gone"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:layout_alignLeft="@+id/img_rvItem"
+    android:layout_alignRight="@+id/img_rvItem"
+    android:layout_centerVertical="true"
+    android:textColor="@color/black"
+    android:background="@drawable/circular_tv"
+    />
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/img_rvItem"
+        android:layout_below="@+id/child2_rel"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/img_coin"
+        app:civ_border_width="2dp"
+        android:visibility="visible"
+        app:civ_border_color="#FFC107"/>
+
+
+</RelativeLayout>
