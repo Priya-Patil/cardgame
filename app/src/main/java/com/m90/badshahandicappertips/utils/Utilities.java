@@ -1,8 +1,10 @@
 package com.m90.badshahandicappertips.utils;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Fragment;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -18,6 +20,7 @@ import com.androidnetworking.common.Priority;
 import com.androidnetworking.error.ANError;
 import com.androidnetworking.interfaces.StringRequestListener;
 import com.google.android.material.snackbar.Snackbar;
+import com.m90.badshahandicappertips.R;
 
 
 import java.security.MessageDigest;
@@ -218,47 +221,13 @@ public class Utilities {
     }
 
 
-
-//    public static void sendIntent(Context context, String action) {
-//        final Intent intent = new Intent(context, MusicService.class);
-//        intent.setAction(action);
-//        context.startService(intent);
-//    }
-//
-//    public static void sendIntent(Context context, String action, Bundle b) {
-//        final Intent intent = new Intent(context, MusicService.class);
-//        intent.putExtras(b);
-//        intent.setAction(action);
-//        context.startService(intent);
-//    }
-
-      public static String getCurrentMonthFirstDate(){
+   public static String getCurrentMonthFirstDate(){
     Calendar c = Calendar.getInstance();
     c.set(Calendar.DAY_OF_MONTH, 1);
     DateFormat df = new SimpleDateFormat("yyyy-MM-dd");
     //System.out.println(df.format(c.getTime()));
     return df.format(c.getTime());
 }
-
-
-
-   /*
-
-       convert string to date in DDMMYYYY format
-
-       String date=item.getStartdate();
-        SimpleDateFormat ddMMyyyyFormat = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
-        Log.e("Adapter", date);
-        try {
-            Date d=ddMMyyyyFormat.parse(date);
-            System.out.println("DATE"+d);
-            System.out.println("Formated"+ddMMyyyyFormat.format(d));
-            Log.e("Adapter", "sss  "+String.valueOf(ddMMyyyyFormat.format(d)));
-        }
-        catch(Exception e) {
-            //java.text.ParseException: Unparseable date: Geting error
-            System.out.println("Excep"+e);
-        }*/
 
 
 
@@ -288,4 +257,26 @@ public class Utilities {
             apiStatusCallBack.onUnknownError(ex);
         }
     }
+
+    public static void dialog(Activity context,String message) {
+      final AlertDialog.Builder mBuilder = new AlertDialog.Builder(context);
+        mBuilder.setTitle(message);
+        mBuilder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int i) {
+
+                    dialog.dismiss();
+
+
+                //Utilities.launchActivity(context, LoginActivity.class,true);
+
+            }
+        });
+
+        mBuilder.setNegativeButton("Cancel", null);
+        AlertDialog mDialog = mBuilder.create();
+        mDialog.getWindow().setBackgroundDrawableResource(R.drawable.dialog_rounded_background);
+        mDialog.show();
+    }
+
 }

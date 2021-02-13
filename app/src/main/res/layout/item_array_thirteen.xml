@@ -5,16 +5,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/relative_random">
 
-
     <ImageView
         android:id="@+id/img_card4"
         android:layout_width="50dp"
         android:layout_height="70dp"
         android:layout_marginRight="10dp"
         android:layout_centerInParent="true"
+        android:background="@drawable/img_cardbg"
         android:layout_marginBottom="10dp"
-        android:visibility="visible"
-        android:src="@drawable/img_cardbg" />
+        android:visibility="visible" />
 
 <androidx.cardview.widget.CardView
     android:layout_width="wrap_content"

@@ -8,7 +8,7 @@ public class RetrofitClientInstance {
     private static Retrofit retrofit2;
 
     //private static final String BASE_URL = "http://badsha.cricketnewshub.xyz/public/api/";
-     private static final String BASE_URL = "http://garage.avistore.in/public/api/";
+     private static final String BASE_URL = "https://onlinekirana.store/cardgame/public/api/";
 
 
     public static Retrofit getRetrofitInstanceServer() {

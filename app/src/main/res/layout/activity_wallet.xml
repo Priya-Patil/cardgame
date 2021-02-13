@@ -1,11 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools">
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/img_bg"
-    tools:context=".WalletActivity">
+    tools:context=".wallet.WalletActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -61,8 +62,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/cardview_Recharge"
             app:cardCornerRadius="10dp"
-            app:cardElevation="20dp"
-
+            app:cardElevation="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             app:cardUseCompatPadding="true"
@@ -136,6 +136,17 @@
                     android:textSize="12sp" />
             </RelativeLayout>
         </androidx.cardview.widget.CardView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_walletHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/padding_20"
+            android:layout_marginRight="@dimen/padding_20"
+            android:layout_below="@id/cardview_Recharge"/>
     </RelativeLayout>
 
 </RelativeLayout>
+
+</layout>

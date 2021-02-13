@@ -14,7 +14,6 @@ public class FourCardModel {
         this.pos = pos;
     }
 
-
     public String getUrl() {
         return url;
     }

@@ -16,29 +16,20 @@ import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.FrameLayout;
 
-import com.m90.badshahandicappertips.MG.Fragment_NavHomeButton;
-import com.m90.badshahandicappertips.MG.GameHistoryActivity;
-import com.m90.badshahandicappertips.MG.WalletActivity;
+import com.m90.badshahandicappertips.fragment.Fragment_NavHomeButton;
+import com.m90.badshahandicappertips.gamehistory.GameHistoryActivity;
+import com.m90.badshahandicappertips.wallet.WalletActivity;
 import com.m90.badshahandicappertips.R;
-import com.m90.badshahandicappertips.fragment.Frag_Nav_AboutUs;
-import com.m90.badshahandicappertips.fragment.Frag_Nav_History;
-import com.m90.badshahandicappertips.fragment.Frag_Nav_Home_Button;
-import com.m90.badshahandicappertips.fragment.Frag_Nav_TnC;
-import com.m90.badshahandicappertips.fragment.Frag_Nav_WalletHistory;
-import com.m90.badshahandicappertips.utils.Utilities;
 import com.yarolegovich.slidingrootnav.SlidingRootNav;
 import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 import java.util.Arrays;
-import java.util.zip.Inflater;
 
 public class Select_Nav_Menu extends AppCompatActivity implements DrawerAdapter.OnItemSelectedListener,View.OnClickListener {
 
@@ -57,6 +48,7 @@ public class Select_Nav_Menu extends AppCompatActivity implements DrawerAdapter.
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_nav__home);
 
         setStatusbarColor();
@@ -116,11 +108,6 @@ public class Select_Nav_Menu extends AppCompatActivity implements DrawerAdapter.
             Intent intent = new Intent(getApplicationContext(), WalletActivity.class);
             startActivity(intent);
 
-
-         //   Fragment Home = new Frag_Nav_WalletHistory();
-           // fragmentTransaction.replace(R.id.Frame_container, Home);
-            //fragmentTransaction.commit();
-
         } else if (position == POS_HISTORY) {
             getSupportActionBar().setTitle("GAME HISTORY");
             Intent intent = new Intent(getApplicationContext(), GameHistoryActivity.class);
@@ -128,15 +115,21 @@ public class Select_Nav_Menu extends AppCompatActivity implements DrawerAdapter.
 
         } else if (position == POS_ABOUT_US) {
             getSupportActionBar().setTitle("ABOUT US");
-            Fragment Home = new Frag_Nav_AboutUs();
+            /*Fragment Home = new Frag_Nav_AboutUs();
             fragmentTransaction.replace(R.id.Frame_container, Home);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit();*/
+
+            Intent intent = new Intent(getApplicationContext(), GameHistoryActivity.class);
+            startActivity(intent);
 
         } else if (position == POS_TnC) {
             getSupportActionBar().setTitle("TERMS AND CONDITIONS");
-            Fragment Home = new Frag_Nav_TnC();
+           /* Fragment Home = new Frag_Nav_TnC();
             fragmentTransaction.replace(R.id.Frame_container, Home);
-            fragmentTransaction.commit();
+            fragmentTransaction.commit();*/
+
+            Intent intent = new Intent(getApplicationContext(), GameHistoryActivity.class);
+            startActivity(intent);
 
         }
 

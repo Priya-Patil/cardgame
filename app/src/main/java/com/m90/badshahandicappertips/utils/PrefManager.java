@@ -50,13 +50,13 @@ public class PrefManager {
     }
 
 
-    public void setUserid(String S) {
-        editor.putString(Userid, S);
+    public void setUserid(int S) {
+        editor.putInt(Userid, S);
         editor.commit();
     }
 
-    public String getUserid() {
-        return pref.getString(Userid, null);
+    public int getUserid() {
+        return pref.getInt(Userid, 0);
     }
 
 

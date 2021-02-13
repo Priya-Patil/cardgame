@@ -14,39 +14,55 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
+            android:layout_marginBottom="10dp"
             android:id="@+id/view"
             android:text="Recharge "
             android:visibility="visible"
             android:textColor="@color/color_blue1"
             android:gravity="center"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:layout_centerHorizontal="true"
 
           />
         <!--Child LinearLayout 1-->
+
+        <LinearLayout
+            android:id="@+id/ll_spin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/padding_10"
+            android:layout_below="@+id/view">
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Amount"
             android:id="@+id/tv_amt"
-            android:layout_margin="10dp"
             android:padding="10dp"
             android:textColor="@color/black"
-            android:layout_below="@+id/view"
-            />
-        <Spinner
-            android:id="@+id/sp_Amt"
-            android:layout_toRightOf="@id/tv_amt"
-            android:layout_below="@+id/view"
-            android:padding="10dp"
-            android:spinnerMode="dialog"
-            android:background="@color/white"
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:layout_margin="10dp"
+
             />
 
+        <Spinner
+            android:id="@+id/sp_Amt"
+            android:spinnerMode="dialog"
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_amt"
+            android:layout_below="@+id/view"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        </LinearLayout>
 
         <TextView
             android:id="@+id/tv_Ok"
@@ -68,6 +84,7 @@
             android:textAllCaps="true"
             android:textColor="@color/color_blue1"
             android:textSize="12sp" />
+
         <TextView
             android:id="@+id/tv_Cancle"
             android:layout_width="wrap_content"
@@ -88,12 +105,13 @@
             android:textAllCaps="true"
             android:textColor="@color/color_blue1"
             android:textSize="12sp" />
+
         <TextView
             android:id="@+id/tv_rechOk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="10dp"
-            android:layout_below="@+id/sp_Amt"
+            android:layout_below="@+id/ll_spin"
             android:layout_centerHorizontal="true"
             android:shadowColor="#A8A8A8"
             android:layout_marginBottom="10dp"

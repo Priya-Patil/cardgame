@@ -18,18 +18,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".home.HomeButtonsActivity"></activity>
-        <activity android:name=".MG.WalletActivity"></activity>
-        <activity android:name=".MG.GameHistoryActivity"></activity>
+        <activity android:name=".wallet.WalletActivity">
 
-        <activity android:name=".MG.FourCardActivity"></activity>
-        <activity android:name=".fragment.FourCardHomeActivity" />
-        <activity android:name=".home.HomeActivity" />
+        </activity>
+        <activity android:name=".gamehistory.GameHistoryActivity">
+
+        </activity>
+
+        <activity android:name=".card.FourCardActivity">
+
+        </activity>
         <activity
             android:name=".otp.OTPActivity"
             android:windowSoftInputMode="adjustResize" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".home.Select_Nav_Menu" />
+        <activity android:name=".home.Select_Nav_Menu" >
+
+        </activity>
         <activity android:name=".welcome.WelcomeActivity" />
         <activity android:name=".splash.SplashActivity">
             <intent-filter>

@@ -8,13 +8,9 @@ import android.view.WindowManager;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.m90.badshahandicappertips.R;
-import com.m90.badshahandicappertips.fragment.FourCardHomeActivity;
-import com.m90.badshahandicappertips.home.HomeButtonsActivity;
 import com.m90.badshahandicappertips.home.Select_Nav_Menu;
-import com.m90.badshahandicappertips.otp.OTPActivity;
 import com.m90.badshahandicappertips.utils.SessionHelper;
 
-import com.m90.badshahandicappertips.home.HomeActivity;
 import com.m90.badshahandicappertips.utils.PrefManager;
 import com.m90.badshahandicappertips.utils.Utilities;
 import com.m90.badshahandicappertips.welcome.WelcomeActivity;
@@ -32,7 +28,6 @@ public class SplashActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         setContentView(R.layout.activity_splash);
 
         prefManager = new PrefManager(this);
