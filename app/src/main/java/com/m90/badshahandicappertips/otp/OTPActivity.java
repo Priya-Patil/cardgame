@@ -31,10 +31,7 @@ import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.PermissionRequestErrorListener;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.m90.badshahandicappertips.R;
-import com.m90.badshahandicappertips.fragment.FourCardHomeActivity;
 import com.m90.badshahandicappertips.home.HomeActivity;
-import com.m90.badshahandicappertips.home.HomeButtonsActivity;
-import com.m90.badshahandicappertips.home.Select_Nav_Menu;
 import com.m90.badshahandicappertips.services.OTPServices;
 import com.m90.badshahandicappertips.utils.ApiStatusCallBack;
 import com.m90.badshahandicappertips.utils.SessionHelper;
@@ -71,7 +68,6 @@ import retrofit2.Response;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_SECURE, WindowManager.LayoutParams.FLAG_SECURE);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_o_t_p);
 
         activity=OTPActivity.this;
@@ -98,7 +94,6 @@ import retrofit2.Response;
                     binding.layout2.setVisibility(View.VISIBLE);
                     timerForOtp(binding.etMobile.getText().toString(), message);
 
-
                }
                 else {
                     Toast.makeText(OTPActivity.this, "Enter proper mobile number", Toast.LENGTH_SHORT).show();
@@ -119,10 +114,9 @@ import retrofit2.Response;
                                 {
                                     if (binding.etOtp.getText().toString().equals("123456"))
                                     {
-                                        sessionHelper.setLogin(true);
-                                        Utilities.launchActivity(OTPActivity.this, HomeButtonsActivity.class, true);
+                                       // sessionHelper.setLogin(true);
+                                        checkLogin(binding.etMobile.getText().toString());
                                     }
-                                   // checkLogin(binding.etMobile.getText().toString());
                                 } else {
                                     Toast.makeText(OTPActivity.this, "Enter proper otp", Toast.LENGTH_SHORT).show();
                                 }
@@ -131,7 +125,6 @@ import retrofit2.Response;
                     });
 
     }
-
 
     private void updateCountDownText(long millisUntilFinished) {
         int minutes = (int) (millisUntilFinished / 1000) / 60;
@@ -148,7 +141,6 @@ import retrofit2.Response;
     }
 
     private void timerForOtp(String mobileNumber,String message) {
-
 
         binding.tvSmsRecv.setVisibility(View.GONE);
         SpannableString span = new SpannableString("Didn't receive SMS ? Resend");
@@ -181,7 +173,7 @@ import retrofit2.Response;
                 //Toast.makeText(AuthenticationActivity.this,"Time Out!! Resend OTP",Toast.LENGTH_LONG).show();
                 SpannableString span = new SpannableString("Didn't receive SMS ? Resend");
                 span.setSpan(new ForegroundColorSpan(getResources().getColor(R.color.orange)), 21, 27, 0);
-               binding.tvSmsRecv.setText(span, TextView.BufferType.SPANNABLE);
+                binding.tvSmsRecv.setText(span, TextView.BufferType.SPANNABLE);
                 binding.tvSmsRecv.setVisibility(View.VISIBLE);
                 //tv_sms_recv.setTextColor(Color.parseColor("#002266"));
                 binding.tvSmsRecv.setOnClickListener(new View.OnClickListener() {
@@ -232,14 +224,15 @@ import retrofit2.Response;
                         public void onResponse(Call<OTPResponce> call, Response<OTPResponce> response) {
 
                               OTPResponce otpResponce = response.body();
-                                  sessionHelper.setLogin(true);
-                                Log.e("otpResponce: ", String.valueOf(otpResponce.id));
-                                prefManager.setUserid(String.valueOf(otpResponce.id));
-                                prefManager.setMobile(otpResponce.mobile);
-                                     // Utility.launchActivity(OTPActivity.this, HomeActivity.class, true);
-                                progressDialog.dismiss();
 
-                            Utilities.launchActivity(OTPActivity.this, HomeButtonsActivity.class, true);
+                                sessionHelper.setLogin(true);
+                                Log.e("otpResponce: ", String.valueOf(otpResponce.id));
+                                prefManager.setUserid(otpResponce.id);
+                                prefManager.setMobile(otpResponce.mobile);
+                                progressDialog.dismiss();
+                          /*  Intent intent = new Intent(getApplicationContext(), Select_Nav_Menu.class);
+                            startActivity(intent);*/
+                                Utilities.launchActivity(OTPActivity.this, HomeActivity.class, true);
                         }
 
                         @Override

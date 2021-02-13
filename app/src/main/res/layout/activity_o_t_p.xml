@@ -3,10 +3,12 @@
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/blurbg" >
+        android:background="@drawable/card3"
+        >
 
         <ScrollView
             android:layout_width="match_parent"
@@ -17,7 +19,6 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_gravity="center_vertical">
-
 
         <!--1st Layout-->
         <LinearLayout
@@ -103,6 +104,7 @@
                     android:layout_weight="1"
                     android:orientation="horizontal"
                     android:weightSum="10"
+                    android:layout_marginTop="@dimen/padding_10"
                     android:gravity="center"
                     android:layout_height="50dp"
                     >
@@ -114,7 +116,8 @@
                         android:layout_marginLeft="15dp"
                         android:gravity="center"
                         android:layout_height="match_parent"
-                        android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"/>
+                        android:drawableLeft="@drawable/ic_baseline_add_ic_call_24"
+                        android:drawableTint="@color/white"/>
 
                     <EditText
                         android:id="@+id/et_mobile"
@@ -135,15 +138,23 @@
             </LinearLayout>
 
 
-            <Button
-                android:id="@+id/submit1"
+
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="50dp"
-                android:text="continue"
-                android:textColor="#fff"
+                android:text="Continue"
+                android:id="@+id/submit1"
+                android:textAllCaps="true"
                 android:textStyle="bold"
-                android:background="@color/orange"/>
+                android:background="@drawable/buttongradient"
+                android:shadowColor="#E91E63"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:layout_marginTop="@dimen/padding_20"
+                android:gravity="center"
+                android:layout_weight="2"
+                android:shadowRadius="8"
+                android:padding="10dp"/>
         </LinearLayout>
 
         <!--2nd Layout-->
@@ -162,7 +173,7 @@
                 android:layout_height="wrap_content"
                 android:text="Enter OTP"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="30sp"
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/padding_10"
                 android:textColor="@color/white"/>
@@ -172,6 +183,7 @@
                 android:layout_weight="1"
                 android:orientation="horizontal"
                 android:weightSum="10"
+                android:layout_marginTop="@dimen/padding_20"
                 android:gravity="center"
                 android:layout_height="50dp"
                 >
@@ -196,6 +208,7 @@
                     android:gravity="center|left"
                     android:inputType="number"
                     android:maxLength="6"
+                    android:textSize="18dp"
                     android:layout_height="match_parent" />
 
 
@@ -221,23 +234,29 @@
                 android:layout_height="wrap_content"
                 android:text="OTP expire after 00:00"
                 android:textAlignment="center"
-                android:textSize="18sp"
+                android:textSize="22sp"
                 android:textStyle="bold"
                 android:layout_marginTop="@dimen/padding_10"
                 android:textColor="@color/white"/>
 
-
-
-            <Button
-                android:id="@+id/submit2"
+            <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Verify "
-                android:textColor="#fff"
+                android:text="Verify"
+                android:id="@+id/submit2"
+                android:textAllCaps="true"
                 android:textStyle="bold"
-                android:background="@color/orange"
-                android:layout_marginTop="50dp"
-                android:layout_gravity="center_horizontal"/>
+                android:background="@drawable/buttongradient"
+                android:shadowColor="#E91E63"
+                android:shadowDx="3"
+                android:shadowDy="2"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/padding_20"
+                android:layout_weight="2"
+                android:shadowRadius="8"
+                android:textSize="@dimen/margin_16"
+                android:padding="10dp"/>
+
 
 
             <TextView
@@ -248,7 +267,7 @@
                 android:text="Didn't receive SMS ? Resend "
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="14sp"
+                android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="@dimen/padding_20"/>
 

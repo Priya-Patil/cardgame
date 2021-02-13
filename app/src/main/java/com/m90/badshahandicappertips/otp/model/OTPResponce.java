@@ -19,8 +19,7 @@ public  class OTPResponce {
     public String address;
     @SerializedName("message")
     public String message;
-    @SerializedName("expirydate")
-    public String expirydate;
+
     @SerializedName("isactive")
     public int isactive;
     @SerializedName("updated_at")
@@ -37,7 +36,6 @@ public  class OTPResponce {
                 ", email='" + email + '\'' +
                 ", address='" + address + '\'' +
                 ", message='" + message + '\'' +
-                ", expirydate='" + expirydate + '\'' +
                 ", isactive=" + isactive +
                 ", updated_at='" + updated_at + '\'' +
                 ", created_at='" + created_at + '\'' +
@@ -90,14 +88,6 @@ public  class OTPResponce {
 
     public void setMessage(String message) {
         this.message = message;
-    }
-
-    public String getExpirydate() {
-        return expirydate;
-    }
-
-    public void setExpirydate(String expirydate) {
-        this.expirydate = expirydate;
     }
 
     public int getIsactive() {

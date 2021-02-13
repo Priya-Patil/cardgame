@@ -27,7 +27,6 @@ import com.m90.badshahandicappertips.utils.PrefManager;
 
 public class WelcomeActivity extends AppCompatActivity {
 
-
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private LinearLayout dotsLayout;

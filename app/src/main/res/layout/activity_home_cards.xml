@@ -1,0 +1,185 @@
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/img_bg">
+
+    <!-- Four Cards Sneha-->
+    <LinearLayout
+        android:id="@+id/ll_fourcards"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--four Cards-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            android:layout_marginBottom="@dimen/padding_20">
+
+            <RelativeLayout
+                android:id="@+id/rl_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/ic_arrow_back"
+                    android:layout_marginLeft="@dimen/padding_10"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cards"
+                    android:textAllCaps="false"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/iv_back"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_recyclers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_below="@id/rl_toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cardsFour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_centerHorizontal="true"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding_10"
+                android:visibility="gone"/>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_cardThirtreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/padding_10"
+                android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tv_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="@dimen/padding_20"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="40dp"
+                android:layout_below="@+id/ll_recyclers"
+                android:background="@drawable/circular_tv"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/child3_rel"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/tv_amount">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_recycler"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal" />
+
+            </RelativeLayout>
+
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_above="@+id/ll_bottomButtons"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:id="@+id/ll_bottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal|bottom"
+                android:layout_marginBottom="30dp"
+                android:weightSum="4"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="@dimen/padding_20"
+                android:layout_marginRight="@dimen/padding_20"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Back"
+                    android:id="@+id/tv_back"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:background="@drawable/buttongradient"
+                    android:shadowColor="#E91E63"
+                    android:shadowDx="3"
+                    android:shadowDy="2"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:shadowRadius="8"
+                    android:padding="10dp"/>
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:id="@+id/tv_continue"
+                    android:layout_toRightOf="@+id/btn_back"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="60dp"
+                    android:background="@drawable/buttongradient"
+                    android:gravity="center"
+                    android:layout_weight="2"
+                    android:shadowColor="#E91E63"
+                    android:shadowDx="3"
+                    android:shadowDy="2"
+                    android:shadowRadius="8"
+                    android:padding="10dp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <!--End four Cards-->
+
+
+
+    </LinearLayout>
+    <!-- End Four Cards Sneha-->
+
+</RelativeLayout>
+
+</layout>

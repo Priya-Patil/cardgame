@@ -43,6 +43,7 @@ public class SessionHelper {
             editor.putString(TAG_TOKEN, "No Token");
             editor.commit();
         }
+
     }
 
     public void setLogin(boolean isLoggedIn) {

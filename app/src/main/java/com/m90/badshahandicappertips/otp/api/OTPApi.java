@@ -11,7 +11,7 @@ public interface OTPApi {
 
 
     @FormUrlEncoded
-    @POST("appuser")
+    @POST("saveUser")
     Call<OTPResponce> checkLogin (
             @Field("mobile") String mobile
             // lang: eng/mar
